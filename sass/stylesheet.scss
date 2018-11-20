@@ -1,2 +1,53 @@
-* { padding: 0; margin: 0; }
-canvas { background: #eee; display: block; margin: 0 auto; }
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans:400');
+
+body {
+  background-color: #f7bd04;
+  font-family: "Ropa Sans", sans-serif;
+  color: aliceblue;
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+  padding: 0 20px;
+}
+button, input {
+  background-color: transparent;
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Ropa Sans", sans-serif;
+  display: block;
+  margin: 20px auto;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+input::placeholder {
+  text-align: center;
+  font-size: 20px;
+}
+button {
+  width: 203px;
+}
+.header_content, .text_content, .resultDiv {
+  border: 3px solid grey;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+}
+.header_content {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.text_paragraph {
+  font-size: 25px;
+  padding: 20px;
+}
+.resultDiv {
+  display: none;
+  word-wrap: break-word;
+  margin-top: 25px;
+  p {
+    padding: 20px;
+    font-size: 20px;
+  }
+}

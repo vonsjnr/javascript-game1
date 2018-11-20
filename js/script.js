@@ -6,7 +6,7 @@ var arrMultiSeven = [];
 var arrMultiEleven = [];
 var allArray = [];
 var primeArray = [];
-var unique = [];
+var filteredArr = [];
 
 function showAllCollection() {
     var arrEnd = document.getElementById("inputValue").value;
@@ -64,18 +64,31 @@ function sortNumbers() {
         return a-b});
 }
 function showPrime() {
-        primeArray = arr.filter(function(x) {
+    primeArray = arr.filter(function(x) {
         return allArray.indexOf(x) < 0;
     });
 }
 function duplicateFilter() {
-    unique = primeArray.filter(function(elem, index, self) {
+    filteredArr = primeArray.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     })
 }
 
-
 function mainFunction() {
+
+    if (document.getElementById("inputValue").value > 10000) {
+        alert("Podano zbyt dużą wartość!");
+        return;
+    }
+    else if (document.getElementById("inputValue").value <= 2) {
+        alert("Brak liczb pierwszych!");
+        return;
+    }
+    else if (document.getElementById("inputValue").value < 0) {
+        alert("Zły numer! Podaj wartość w przedziale od 0 do 10000");
+        return;
+    }
+
     showAllCollection();
     multipleTwoCollection ();
     multipleThreeCollection();
@@ -87,7 +100,8 @@ function mainFunction() {
     showPrime();
     duplicateFilter();
 
-    document.getElementById("resultField12").innerHTML = unique;
+    document.getElementById("resultDiv").style.display = "block";
+    document.getElementById("resultField").textContent = filteredArr;
 }
 document.getElementById("myBtn").addEventListener("click", mainFunction);
 
