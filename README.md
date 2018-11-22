@@ -7,3 +7,6 @@ N = 1 – brak odpowiedzi
 N = 2 – brak odpowiedzi
 N = 3 – 2
 N = 10 – 2, 3, 5, 7
+
+
+Demo: https://vonsjnr.github.io/javascript-game1/
